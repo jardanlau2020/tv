@@ -8,6 +8,10 @@ on:
     branches:
       - main
 
+concurrency:
+  group: itvlist-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
